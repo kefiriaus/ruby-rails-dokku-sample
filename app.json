@@ -1,12 +1,12 @@
 {
-  "name": "golovkin.cc",
-  "description": "My personal site",
-  "website": "http://golovkin.cc",
-  "repository": "https://github.com/heroku/ruby-rails-sample",
+  "name": "Site",
+  "description": "",
+  "website": "",
+  "repository": "",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Ruby_on_Rails_logo.svg",
   "scripts": {
     "dokku": {
-      "postdeploy": "bundle exec rake db:migrate && bundle exec rake sitemap:refresh"
+      "postdeploy": "bundle exec rake db:migrate && bundle exec rake db:seed"
     }
   },
   "env": {
