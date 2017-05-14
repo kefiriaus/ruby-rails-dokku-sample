@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
+ruby '2.4.0'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -41,9 +41,18 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+
+  gem 'rubocop' # to check Ruby code
+  gem 'scss-lint' # to check SCSS code
+
+  gem 'phare' # check for coding style errors
+
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -52,5 +61,53 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Project
+
+gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
+
+# ENV variables
+gem 'figaro', github: 'morizyun/figaro'
+
+# Database based asynchronous priority queue system
+# gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.1'
+# gem 'daemons', '~> 1.2', '>= 1.2.4'
+
+# ActiveAdmin
+gem 'activeadmin', '~> 1.0'
+gem 'inherited_resources', '~> 1.7', '>= 1.7.2'
+gem "active_material", github: "vigetlabs/active_material" # , branch: 'nh-responsive-redesign'
+
+gem 'devise', '~> 4.3', '>= 4.2.1', github: 'plataformatec/devise'
+gem 'devise-i18n', '~> 1.1', '>= 1.1.2'
+gem 'omniauth' # Standardized Multi-Provider Authentication (facebook, vk, ok, instagram, etc.)
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
+gem 'omniauth-odnoklassniki'
+gem 'omniauth-instagram'
+
+gem 'carrierwave', '~> 1.1'
+gem "mini_magick"
+
+# Email validator
+gem 'validates_email_format_of'
+
+# Meta tags
+gem 'meta-tags'
+
+# Error pages
+gem 'gaffe'
+
+# Complete Ruby geocoding solution
+gem 'geocoder'
+
+# Menu DSL
+gem "navigator"
+
+# Breadcrumbs
+gem "breadcrumbs_on_rails"
+
+# Comments
+gem 'acts_as_commentable'
+
+# Tags
+gem 'acts-as-taggable-on', '~> 4.0'
