@@ -69,15 +69,15 @@ gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
 gem 'figaro', github: 'morizyun/figaro'
 
 # Database based asynchronous priority queue system
-# gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.1'
-# gem 'daemons', '~> 1.2', '>= 1.2.4'
+gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.2'
+gem 'daemons', '~> 1.2', '>= 1.2.4'
 
 # ActiveAdmin
 gem 'activeadmin', '~> 1.0'
 gem 'inherited_resources', '~> 1.7', '>= 1.7.2'
 gem "active_material", github: "vigetlabs/active_material" # , branch: 'nh-responsive-redesign'
 
-gem 'devise', '~> 4.3', '>= 4.2.1', github: 'plataformatec/devise'
+gem 'devise', '~> 4.3'
 gem 'devise-i18n', '~> 1.1', '>= 1.1.2'
 gem 'omniauth' # Standardized Multi-Provider Authentication (facebook, vk, ok, instagram, etc.)
 gem 'omniauth-facebook'
