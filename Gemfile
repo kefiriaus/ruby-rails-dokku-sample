@@ -69,8 +69,8 @@ gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
 gem 'figaro', github: 'morizyun/figaro'
 
 # Database based asynchronous priority queue system
-gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.2'
-gem 'daemons', '~> 1.2', '>= 1.2.4'
+# gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.2'
+# gem 'daemons', '~> 1.2', '>= 1.2.4'
 
 # ActiveAdmin
 gem 'activeadmin', '~> 1.0'
