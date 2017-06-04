@@ -75,7 +75,9 @@ gem 'daemons', '~> 1.2', '>= 1.2.4'
 # ActiveAdmin
 gem 'activeadmin', '~> 1.0'
 gem 'inherited_resources', '~> 1.7', '>= 1.7.2'
-gem "active_material", github: "vigetlabs/active_material" # , branch: 'nh-responsive-redesign'
+gem 'bootstrap-sass'
+gem 'active_bootstrap_skin'
+#gem "active_material", github: "vigetlabs/active_material" # , branch: 'nh-responsive-redesign'
 
 gem 'devise', '~> 4.3'
 gem 'devise-i18n', '~> 1.1', '>= 1.1.2'
