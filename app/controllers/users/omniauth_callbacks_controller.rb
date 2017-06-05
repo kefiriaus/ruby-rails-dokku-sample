@@ -11,6 +11,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     omniauth_register(:odnoklassniki)
   end
 
+  def instagram
+    omniauth_register(:instagram)
+  end
+
   # You should also create an action method in this controller like this:
   # def twitter
   # end

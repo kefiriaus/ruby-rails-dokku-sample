@@ -265,6 +265,10 @@ Devise.setup do |config|
                   redirect_url: "#{ENV["url"]}/auth/odnoklassniki/callback",
                   scope: 'VALUABLE_ACCESS GET_EMAIL',
                   display: 'popup'
+  config.omniauth :instagram, ENV["instagram_id"], ENV["instagram_secret"],
+                  redirect_url: "#{ENV["url"]}/auth/instagram/callback",
+                  scope: 'basic public_content',
+                  display: 'popup'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

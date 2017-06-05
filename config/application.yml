@@ -10,6 +10,8 @@ vk_secret: ''
 ok_id: ''
 ok_secret: ''
 ok_public: ''
+instagram_id: ''
+instagram_secret: ''
 production:
   smtp_host: 'testdomain.com'
   protocol: 'https'
