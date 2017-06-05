@@ -63,6 +63,11 @@ end
 
 # Project
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Add compatibility with jquery
+gem 'jquery-turbolinks', '~> 2.1'
+
 gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
 
 # ENV variables

@@ -1,0 +1,13 @@
+<%#= link_to image_tag('logo.png'), root_path, class: 'header__logo' %>
+
+<div class="nav">
+  <div class="nav__item">
+    <%= link_to 'menu1', '', class: "nav__link #{(current_page?(root_path) ? 'nav__link--active' : '')}" %>
+  </div>
+  <div class="nav__item">
+    <%= link_to 'menu2', '', class: "nav__link #{(current_page?(root_path) ? 'nav__link--active' : '')}" %>
+  </div>
+  <div class="nav__item">
+    <%= link_to 'menu3', '', class: "nav__link #{(current_page?(root_path) ? 'nav__link--active' : '')}" %>
+  </div>
+</div>

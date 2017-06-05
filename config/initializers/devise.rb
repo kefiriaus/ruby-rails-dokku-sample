@@ -251,6 +251,20 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook, ENV["fb_id"], ENV["fb_secret"],
+                  callback_url: "#{ENV["url"]}/auth/facebook/callback",
+                  scope: 'email',
+                  display: 'popup',
+                  secure_image_url: true
+  config.omniauth :vkontakte, ENV["vk_id"], ENV["vk_secret"],
+                  redirect_url: "#{ENV["url"]}/auth/vkontakte/callback",
+                  scope: 'email',
+                  display: 'popup'
+  config.omniauth :odnoklassniki, ENV["ok_id"], ENV["ok_secret"],
+                  public_key: ENV["ok_public"],
+                  redirect_url: "#{ENV["url"]}/auth/odnoklassniki/callback",
+                  scope: 'VALUABLE_ACCESS GET_EMAIL',
+                  display: 'popup'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
