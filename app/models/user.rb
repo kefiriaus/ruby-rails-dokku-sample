@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :user_providers, dependent: :destroy
 
-  #mount_uploader :avatar, UserAvatarUploader
+  mount_uploader :picture, UserPictureUploader
 
   def to_s
     name
@@ -39,7 +39,7 @@ class User < ApplicationRecord
         user.email = email
         user.password = Devise.friendly_token[0,20]
         user.name = auth.info.name   # assuming the user model has a name
-        # user.remote_picture_url = auth.info.image # assuming the user model has an image
+        user.remote_picture_url = auth.info.image # assuming the user model has an image
         # If you are using confirmable and the provider(s) you use validate emails,
         # uncomment the line below to skip the confirmation emails.
         user.skip_confirmation!
