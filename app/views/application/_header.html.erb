@@ -1,24 +1,20 @@
-<div class="header">
-  <div class="header__top">
-    <div class="page-width">
-      <div class="header__left">
-        <%= render 'application/header/contacts' %>
-      </div>
-
-      <div class="header__right">
-        <%= render 'application/header/login' %>
-
-        <%= render 'application/header/languages' %>
-
-      </div>
+<nav class="navbar navbar-inverse ">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Main', root_path, class: 'navbar-brand' %>
     </div>
-  </div>
-
-  <div class="header__bottom">
-    <div class="page-width">
+    <div id="navbar" class="navbar-collapse collapse">
       <%= render 'application/header/menu' %>
-
-      <a href="" class="burger"><span></span></a>
+      <%= render 'application/header/login' %>
+      <%#= render 'application/header/languages' %>
+      <%#= render 'application/header/contacts' %>
     </div>
+
   </div>
-</div>
+</nav>

@@ -9,13 +9,11 @@ import TurbolinksAdapter from 'vue-turbolinks'
 import App from './app.vue'
 
 document.addEventListener('turbolinks:load', () => {
-  document.body.appendChild(document.createElement('hello'))
+  $('.content').append(document.createElement('hello'));
   const app = new Vue({
     el: 'hello',
     template: '<App/>',
     mixins: [TurbolinksAdapter],
     components: { App }
-  })
-
-  console.log(app)
-})
+  });
+});

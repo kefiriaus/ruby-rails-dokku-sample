@@ -1,0 +1,125 @@
+.social {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+
+  &--header {
+    margin-left: 30px;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 0;
+    vertical-align: middle;
+
+    line-height: 30px;
+
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    opacity: .9;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    background: image-url("social_header.png") no-repeat 0 0;
+
+    &--vk {
+    }
+    &--ok {
+      background-position: -45px 0;
+    }
+    &--fb {
+      background-position: -90px 0;
+    }
+    &--ig {
+      background-position: -135px 0;
+    }
+
+    &--big {
+      width: 64px;
+      height: 64px;
+      background: image-url("social_big.png") no-repeat 0 0;
+
+      &.social__item--vk {
+      }
+      &.social__item--ok {
+        background-position: -76px 0;
+      }
+      &.social__item--fb {
+        background-position: -152px 0;
+      }
+      &.social__item--ig {
+        background-position: -228px 0;
+      }
+    }
+
+    &--med {
+      width: 50px;
+      height: 50px;
+      background: image-url("social_med.png") no-repeat 0 0;
+
+      &.social__item--vk {
+      }
+      &.social__item--ok {
+        background-position: -76px 0;
+      }
+      &.social__item--fb {
+        background-position: -152px 0;
+      }
+      &.social__item--ig {
+        background-position: -228px 0;
+      }
+    }
+  }
+
+  &--footer {
+    padding-top: 15px;
+
+    .social__item {
+      background: image-url("social_footer.png") no-repeat 0 0;
+      width: 40px;
+      height: 40px;
+
+      &--fb {
+
+      }
+      &--vk {
+        background-position: -61px 0;
+      }
+      &--tw {
+        background-position: -121px 0;
+      }
+      &--gp {
+        background-position: -182px 0;
+      }
+      &--ok {
+        background-position: -243px 0;
+      }
+    }
+  }
+
+
+  &__description {
+    font-size: 16px;
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+    text-align: left;
+    color: #2d2d2d;
+  }
+}

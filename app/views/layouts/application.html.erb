@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= yield :stylesheet %>
+    <%= yield :style %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= yield :script %>
     <%= javascript_pack_tag 'hello_vue' %>
@@ -17,7 +17,14 @@
 
   <body>
     <%= render 'application/header' %>
-    <%= yield %>
-    <%= render 'application/footer' %>
+    <div class="container">
+      <div class="row">
+        <div class="content" id="content">
+        <%= yield %>
+        </div>
+      </div>
+      <%= render 'application/footer' %>
+    </div>
+    <%= render 'application/modals' %>
   </body>
 </html>

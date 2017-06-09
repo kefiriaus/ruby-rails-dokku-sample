@@ -1,23 +1,32 @@
-<div class="footer">
-  <div class="page-width">
-    <div class="footer__left">
-      <div class="footer__logo">
-        <%#= image_tag 'footer_logo.png' %>
-      </div>
+<footer>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="footer__left">
+        <div class="footer__logo">
+          <%#= image_tag 'footer_logo.png' %>
+        </div>
 
-      <div class="footer__text">
-        <%= render 'application/footer/address' %>
+        <div class="footer__text">
+          <%= render 'application/footer/address' %>
+        </div>
       </div>
     </div>
-    <div class="footer__center">
-      <%= render 'application/footer/contacts' %>
+    <div class="col-sm-4">
+      <div class="footer__center">
+        <%= render 'application/footer/contacts' %>
+      </div>
     </div>
-    <div class="footer__right">
-      <%= render 'application/footer/socials' %>
-    </div>
-
-    <div class="footer__bottom">
-      <%= render 'application/footer/copyright' %>
+    <div class="col-sm-4">
+      <div class="footer__right">
+        <%= render 'application/footer/socials' %>
+      </div>
     </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="footer__bottom">
+        <%= render 'application/footer/copyright' %>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,6 @@
+<% unless user_signed_in? %>
+  <%= render 'application/modals/registration' %>
+  <%= render 'application/modals/session' %>
+  <%= render 'application/modals/password' %>
+<% end %>
+<%= yield :modal %>

@@ -101,6 +101,9 @@ gem 'validates_email_format_of'
 # Meta tags
 gem 'meta-tags'
 
+# Sitemap
+gem 'sitemap_generator'
+
 # Error pages
 gem 'gaffe'
 
