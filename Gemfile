@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '~> 5.1'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
@@ -74,8 +76,8 @@ gem 'rails-i18n', '~> 5.0', '>= 5.0.3'
 gem 'figaro', github: 'morizyun/figaro'
 
 # Database based asynchronous priority queue system
-# gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.2'
-# gem 'daemons', '~> 1.2', '>= 1.2.4'
+gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.2'
+gem 'daemons', '~> 1.2', '>= 1.2.4'
 
 # ActiveAdmin
 gem 'activeadmin', '~> 1.0'
